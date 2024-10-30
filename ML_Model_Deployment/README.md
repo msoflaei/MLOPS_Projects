@@ -42,23 +42,23 @@ You can interact with the model deployment in two ways:
 - Ensure Docker is installed on your machine and that you have internet access to pull any required base images.
 - The created Docker container can be deployed on AWS using services like Amazon Elastic Container Service (ECS) or Amazon Elastic Kubernetes Service (EKS). Follow these general steps:
   1. **Push the Docker Image to Amazon ECR**:
-    - First, create an Amazon ECR repository to store your Docker image.
-    - Authenticate Docker to your Amazon ECR registry.
-    - Tag your Docker image:
-     ```bash
-     docker tag <image_name>:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:latest
-     ```
-    - Push the Docker image:
-     ```bash
-     docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:latest
-     ```
+     - First, create an Amazon ECR repository to store your Docker image.
+     - Authenticate Docker to your Amazon ECR registry.
+     - Tag your Docker image:
+        ```bash
+           docker tag <image_name>:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:latest
+         ```
+     - Push the Docker image:
+         ```bash
+           docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository_name>:latest
+          ```
 
   2. **Deploy on Amazon ECS**:
-    - Create a new ECS cluster.
-    - Define a task definition that includes the image URI of your Docker container.
-    - Launch a new service within your ECS cluster using the task definition.
+     - Create a new ECS cluster.
+     - Define a task definition that includes the image URI of your Docker container.
+     - Launch a new service within your ECS cluster using the task definition.
 
   3. **Access the Deployed Service**:
-    - After deployment, you can access your service using the public IP or domain name provided by AWS.
+     - After deployment, you can access your service using the public IP or domain name provided by AWS.
 
 
