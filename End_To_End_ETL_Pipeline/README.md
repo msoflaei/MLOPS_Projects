@@ -1,4 +1,4 @@
-# End-To-End ETL Pipeline Projects Using Apache Airflow
+# End-To-End ETL Pipeline Using Apache Airflow
 
 This project demonstrates the creation of a fully functional ETL (Extract, Transform, Load) pipeline using Apache Airflow. The pipeline automates data extraction from various sources, performs necessary transformations, and loads the transformed data into a target data store.
 
